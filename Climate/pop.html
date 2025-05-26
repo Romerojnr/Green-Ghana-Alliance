@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="pop.css">
+    
     <title>Blog - Green Ghana Alliance</title>
     
 </head>
 <body>
-    
     <header>
         <nav>
             <div class="logo">
@@ -29,16 +28,13 @@
         </nav>
     </header>
 
-    
     <main>
         <div class="container">
-            
             <section class="hero">
                 <h1>Climate Change Blog</h1>
                 <p>Empowering Ghana's youth with knowledge and action for a sustainable future. Discover the latest insights, solutions, and stories about climate change in Ghana and beyond.</p>
             </section>
 
-            
             <section class="blog-grid">
                 <article class="blog-card">
                     <div class="blog-image" style="background-image: url('Understanding\ Climate\ Change\ in\ Ghana.jpg')"></div>
@@ -101,7 +97,6 @@
                 </article>
             </section>
 
-    
             <section class="newsletter">
                 <h2>Stay Updated</h2>
                 <p>Get the latest climate news and youth action stories delivered to your inbox</p>
@@ -141,5 +136,32 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        
+        const mobileMenu = document.getElementById('mobileMenu');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            
+            
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+            } else {
+                document.body.style.overflow = '';
+            }
+        });
+        
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+    </script>
 </body>
 </html>
