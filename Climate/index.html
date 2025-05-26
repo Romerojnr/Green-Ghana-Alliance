@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Ghana Alliance - Educating Youth About Climate Change</title>
+    <link rel="stylesheet" href="index.css">
+    
+</head>
+
+<body>
+    
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <div class="logo-icon">🌱</div>
+                <span>Green Ghana Alliance</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="US.html">Learn</a></li>
+                <li><a href="pop.html">Blog</a></li>
+                <li><a href="Media.html">Media</a></li>
+            </ul>
+            <div class="mobile-menu" id="mobileMenu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    
+    <section class="hero" id="home">
+        <div class="floating-element">🌍</div>
+        <div class="floating-element">🌱</div>
+        <div class="floating-element">♻️</div>
+        <div class="hero-content">
+            <h1>Our Planet Needs You</h1>
+            <p>Join Ghana's youth movement to combat climate change and create a sustainable future for all</p>
+            <a href="#climate-info" class="cta-button">Discover Climate Change</a>
+        </div>
+    </section>
+
+    
+    <section class="climate-info" id="climate-info">
+        <div class="container">
+            <h2 class="section-title">What is Climate Change?</h2>
+            
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="icon">🌡️</div>
+                    <h3>Global Warming</h3>
+                    <p>Climate change refers to long-term shifts in global temperatures and weather patterns. While climate changes are natural, human activities have been the main driver since the 1800s.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="icon">🏭</div>
+                    <h3>Human Impact</h3>
+                    <p>Burning fossil fuels like coal, oil, and gas produces greenhouse gases that trap heat in our atmosphere, causing global temperatures to rise rapidly.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="icon">🌊</div>
+                    <h3>Environmental Effects</h3>
+                    <p>Rising sea levels, extreme weather events, droughts, and floods are all consequences of climate change affecting communities worldwide, especially in Ghana.</p>
+                </div>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="icon">🇬🇭</div>
+                    <h3>Ghana's Challenge</h3>
+                    <p>Ghana faces rising temperatures, changing rainfall patterns, and coastal erosion. These changes threaten our agriculture, water resources, and coastal communities.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="icon">👥</div>
+                    <h3>Youth Action</h3>
+                    <p>Young people are the key to solving climate change. Your energy, creativity, and passion can drive the changes needed to protect our planet's future.</p>
+                </div>
+                
+                <div class="info-card">
+                    <div class="icon">💚</div>
+                    <h3>Solutions Exist</h3>
+                    <p>Renewable energy, sustainable agriculture, reforestation, and lifestyle changes can help reduce greenhouse gas emissions and build climate resilience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="stats">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Climate Facts & Figures</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">1.1</span>
+                    <span class="stat-label">°C Global Temperature Rise</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">70</span>
+                    <span class="stat-label">% Of Ghana's Population at Risk</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">2030</span>
+                    <span class="stat-label">Critical Action Deadline</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">60</span>
+                    <span class="stat-label">% Of Ghana's Youth Want Action</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Green Ghana Alliance</h3>
+                    <p>Empowering Ghana's youth to take action against climate change through education, advocacy, and community engagement.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <a href="mailto:greenghanaalliance@gmail.com">📧 greenghanaalliance@gmail.com</a>
+                        <p>📍 Accra, Ghana</p>
+                        <a href="tel:+233532691145">📞 +233 53 269 1145</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Mission</h3>
+                    <p>To educate, inspire, and mobilize Ghana's youth in the fight against climate change, creating a sustainable and resilient future for our nation.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Green Ghana Alliance. All rights reserved. | Building a greener Ghana together.</p>
+            </div>
+        </div>
+    </footer>
+
+    
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            navLinks.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        }
+
+        
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                const navLinks = document.getElementById('navLinks');
+                const mobileMenu = document.getElementById('mobileMenu');
+                navLinks.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate');
+                }
+            });
+        }, observerOptions);
+
+
+        document.querySelectorAll('.section-title, .info-card, .stat-item').forEach(el => {
+            observer.observe(el);
+        });
+
+
+        function animateCounter(element, target, duration) {
+            let start = 0;
+            const increment = target / (duration / 16);
+            const isNumber = !isNaN(parseFloat(element.textContent));
+            
+            function updateCounter() {
+                start += increment;
+                if (start < target) {
+                    element.textContent = isNumber ? Math.floor(start) : target;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    element.textContent = target;
+                }
+            }
+            updateCounter();
+        }
+
+        
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const statNumbers = entry.target.querySelectorAll('.stat-number');
+                    statNumbers.forEach(stat => {
+                        const text = stat.textContent;
+                        const number = parseFloat(text);
+                        if (!isNaN(number)) {
+                            const target = number;
+                            stat.textContent = '0';
+                            setTimeout(() => {
+                                animateCounter(stat, target, 2000);
+                            }, 500);
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        statsObserver.observe(document.querySelector('.stats'));
+
+        
+        setInterval(() => {
+            const floatingElements = document.querySelectorAll('.floating-element');
+            floatingElements.forEach((element, index) => {
+                const randomX = Math.sin(Date.now() * 0.001 + index) * 20;
+                const randomY = Math.cos(Date.now() * 0.0015 + index) * 15;
+                element.style.transform = `translate(${randomX}px, ${randomY}px)`;
+            });
+        }, 50);
+
+        
+        window.addEventListener('load', () => {
+            
+            const heroElements = document.querySelectorAll('.hero h1, .hero p, .hero .cta-button');
+            heroElements.forEach(el => {
+                el.style.animationPlayState = 'running';
+            });
+        });
+    </script>
+</body>
+</html>

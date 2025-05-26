@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn - Green Ghana Alliance</title>
+    <link rel="stylesheet" href="US.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">🌱</div>
+                Green Ghana Alliance
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="US.html" class="active">Learn</a></li>
+                <li><a href="pop.html">Blog</a></li>
+                <li><a href="Media.html">Media</a></li>
+            </ul>
+            <button class="donate-btn" onclick="openDonateModal()">Donate Now</button>
+            <div class="mobile-menu" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>Learn About Climate Change</h1>
+                <p>Empowering Ghana's youth with knowledge to combat climate change and build a sustainable future</p>
+                <div class="earth-animation"></div>
+            </div>
+        </section>
+
+        <section class="section" id="videos">
+            <div class="container">
+                <h2 class="section-title">Educational Videos</h2>
+                <div class="video-section">
+                    <div class="video-grid">
+                        <div class="video-item">
+                            <div class="video-placeholder" onclick="playVideo('climate-basics')">
+                                <img src="https://i.ytimg.com/vi/dcBRPn3NN3w/maxresdefault.jpg" alt="Climate Change Basics" class="video-thumbnail">
+                                <div class="video-play-icon">▶</div>
+                            </div>
+                            <h4>Climate Change Basics</h4>
+                            <p>Understanding the fundamentals of climate science</p>
+                            <a href="download.html?video=climate-basics" class="download-btn">Download Video</a>
+                        </div>
+                        <div class="video-item">
+                            <div class="video-placeholder" onclick="playVideo('ghana-impact')">
+                                <img src="https://i.ytimg.com/vi/EuwKH_3DvkM/maxresdefault.jpg" alt="Climate Impact in Ghana" class="video-thumbnail">
+                                <div class="video-play-icon">▶</div>
+                            </div>
+                            <h4>Climate Impact in Ghana</h4>
+                            <p>How climate change affects our communities</p>
+                            <a href="download.html?video=ghana-impact" class="download-btn">Download Video</a>
+                        </div>
+                        <div class="video-item">
+                            <div class="video-placeholder" onclick="playVideo('solutions')">
+                                <img src="https://i.ytimg.com/vi/yiw6_JakZFc/maxresdefault.jpg" alt="Climate Solutions" class="video-thumbnail">
+                                <div class="video-play-icon">▶</div>
+                            </div>
+                            <h4>Climate Solutions</h4>
+                            <p>Actions we can take to make a difference</p>
+                            <a href="download.html?video=solutions" class="download-btn">Download Video</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="what-is">
+            <div class="container">
+                <h2 class="section-title">What is Climate Change?</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="gas.webp" alt="Global warming visualization" class="card-image">
+                        <div class="card-icon">🌡</div>
+                        <h3>Definition</h3>
+                        <p>Climate change refers to long-term shifts in global temperatures and weather patterns. While climate variations are natural, human activities since the 1800s have been the main driver of climate change, primarily due to burning fossil fuels like coal, oil, and gas.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                    <div class="card">
+                        <img src="greenhouse gases.jpg" alt="Scientific research" class="card-image">
+                        <div class="card-icon">🔬</div>
+                        <h3>The Science</h3>
+                        <p>Greenhouse gases trap heat in Earth's atmosphere, causing global temperatures to rise. The main greenhouse gases include carbon dioxide (CO₂), methane (CH₄), and nitrous oxide (N₂O). This creates the "greenhouse effect" that warms our planet.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 style="text-align: center; color: #1b4332; margin-bottom: 2rem;">Global Temperature Rise Over Time</h3>
+                    <canvas id="temperatureChart" class="chart-canvas"></canvas>
+                </div>
+
+                <div class="infographic">
+                    <h3 style="text-align: center; color: #1b4332; margin-bottom: 2rem;">Climate Change by the Numbers</h3>
+                    <div class="stat-grid">
+                        <div class="stat-item">
+                            <span class="stat-number">1.1°C</span>
+                            <span class="stat-label">Global temperature rise since 1880</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">421ppm</span>
+                            <span class="stat-label">Current CO₂ levels in atmosphere</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">3.4mm</span>
+                            <span class="stat-label">Annual sea level rise</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">13%</span>
+                            <span class="stat-label">Arctic sea ice decline per decade</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="importance">
+            <div class="container">
+                <h2 class="section-title">Why Climate Change Matters</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="food security.jpg" alt="Agriculture in Ghana" class="card-image">
+                        <div class="card-icon">🌾</div>
+                        <h3>Food Security</h3>
+                        <p>Climate change affects crop yields, threatening food security in Ghana. Changes in rainfall patterns and rising temperatures impact agricultural productivity, especially for crops like cocoa, maize, and cassava.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                    <div class="card">
+                        <img src="water resources.jpg" alt="Water resources" class="card-image">
+                        <div class="card-icon">💧</div>
+                        <h3>Water Resources</h3>
+                        <p>Changing precipitation patterns affect water availability. Ghana faces challenges with both droughts and flooding, impacting communities' access to clean water and affecting hydroelectric power generation.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                    <div class="card">
+                        <img src="Public-Health.jpg" alt="Public health" class="card-image">
+                        <div class="card-icon">🏥</div>
+                        <h3>Public Health</h3>
+                        <p>Climate change increases health risks through heat stress, vector-borne diseases like malaria, and air quality issues. Vulnerable populations, including children and elderly, are most at risk.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 style="text-align: center; color: #1b4332; margin-bottom: 2rem;">Climate Impact Sectors in Ghana</h3>
+                    <canvas id="impactChart" class="chart-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="causes">
+            <div class="container">
+                <h2 class="section-title">Causes of Climate Change</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="fuel.webp" alt="Industrial emissions" class="card-image">
+                        <div class="card-icon">🏭</div>
+                        <h3>Fossil Fuel Burning</h3>
+                        <p>Coal, oil, and gas burning for electricity, heat, and transportation is the largest source of greenhouse gas emissions. In Ghana, this includes thermal power plants and increasing vehicle emissions.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                    <div class="card">
+                        <img src="deforestation_tlu_1024x1024.webp" alt="Deforestation" class="card-image">
+                        <div class="card-icon">🌳</div>
+                        <h3>Deforestation</h3>
+                        <p>Cutting down forests reduces Earth's capacity to absorb CO₂. In Ghana, deforestation for agriculture, logging, and mining contributes significantly to climate change while reducing biodiversity.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=400&h=200&fit=crop" alt="Agriculture and livestock" class="card-image">
+                        <div class="card-icon">🐄</div>
+                        <h3>Agriculture & Livestock</h3>
+                        <p>Farming practices produce methane and nitrous oxide. Livestock farming, rice cultivation, and fertilizer use contribute to greenhouse gas emissions in Ghana's agricultural sector.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 style="text-align: center; color: #1b4332; margin-bottom: 2rem;">Ghana's Greenhouse Gas Emissions by Sector</h3>
+                    <canvas id="emissionsChart" class="chart-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="impacts">
+            <div class="container">
+                <h2 class="section-title">Impacts of Climate Change in Ghana</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="extremeweather.jpg" alt="Extreme weather" class="card-image">
+                        <div class="card-icon">⛈</div>
+                        <h3>Extreme Weather</h3>
+                        <p>Ghana experiences more frequent and intense droughts, floods, and storms. These events destroy infrastructure, displace communities, and damage crops, affecting livelihoods and economic development.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                    <div class="card">
+                        <img src="costal.webp" alt="Coastal erosion" class="card-image">
+                        <div class="card-icon">🌊</div>
+                        <h3>Coastal Erosion</h3>
+                        <p>Rising sea levels threaten Ghana's coastline, affecting fishing communities and coastal infrastructure. Cities like Accra face increasing flooding risks, particularly during the rainy season.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                    <div class="card">
+                        <img src="economic.webp" alt="Economic impact" class="card-image">
+                        <div class="card-icon">💰</div>
+                        <h3>Economic Losses</h3>
+                        <p>Climate change costs Ghana billions of cedis annually through reduced agricultural productivity, infrastructure damage, and increased healthcare costs. This impacts national development goals.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="solutions">
+            <div class="container">
+                <h2 class="section-title">Climate Solutions</h2>
+                <div class="solutions-grid">
+                    <div class="solution-item">
+                        <div class="solution-icon">☀</div>
+                        <h4>Renewable Energy</h4>
+                        <p>Solar, wind, and hydroelectric power</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">🌱</div>
+                        <h4>Reforestation</h4>
+                        <p>Planting trees and protecting forests</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">🚌</div>
+                        <h4>Public Transport</h4>
+                        <p>Reducing car emissions with mass transit</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">♻</div>
+                        <h4>Circular Economy</h4>
+                        <p>Reduce, reuse, and recycle materials</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">🌾</div>
+                        <h4>Sustainable Agriculture</h4>
+                        <p>Climate-smart farming practices</p>
+                    </div>
+                    <div class="solution-item">
+                        <div class="solution-icon">🏠</div>
+                        <h4>Green Buildings</h4>
+                        <p>Energy-efficient construction</p>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <h3 style="text-align: center; color: #1b4332; margin-bottom: 2rem;">Potential CO₂ Reduction by Solution</h3>
+                    <canvas id="solutionsChart" class="chart-canvas"></canvas>
+                </div>
+
+                <div class="card" style="margin-top: 2rem;">
+                    <img src="climate solutions.jpg" alt="Climate solutions" class="card-image">
+                    <h3>Comprehensive Climate Solutions</h3>
+                    <p>Addressing climate change requires systemic changes across all sectors of society. This includes transitioning to clean energy, protecting natural ecosystems, transforming food systems, and building resilient communities.</p>
+                    <a href="#" class="pdf-btn">Download Full Solutions Guide</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="reduce">
+            <div class="container">
+                <h2 class="section-title">How You Can Help</h2>
+                <div class="card-grid">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=200&fit=crop" alt="Sustainable transportation" class="card-image">
+                        <div class="card-icon">🚲</div>
+                        <h3>Transportation</h3>
+                        <p>Walk, cycle, or use public transport. Consider carpooling and choose fuel-efficient vehicles. In Ghana, using tro-tros and shared taxis reduces individual carbon footprints.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                    <div class="card">
+                        <img src="Energy-conservation.jpg" alt="Energy conservation" class="card-image">
+                        <div class="card-icon">💡</div>
+                        <h3>Energy Conservation</h3>
+                        <p>Use LED bulbs, unplug devices when not in use, and choose energy-efficient appliances. Support Ghana's solar energy initiatives and consider solar panels for homes and schools.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                    <div class="card">
+                        <img src="Sustainable Living.jpg" alt="Sustainable living" class="card-image">
+                        <div class="card-icon">🍃</div>
+                        <h3>Sustainable Living</h3>
+                        <p>Reduce plastic use, buy local products, eat less meat, and support sustainable farming. Participate in community clean-up drives and environmental education programs.</p>
+                        <a href="#" class="pdf-btn">Download PDF Guide</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="quiz">
+            <div class="container">
+                <h2 class="section-title">Test Your Knowledge</h2>
+                <div class="quiz-section">
+                    <h3 style="color: #1b4332; margin-bottom: 2rem; text-align: center;">Climate Change Quiz</h3>
+                    
+                    <div class="quiz-question">
+                        <h4>1. What is the main cause of current climate change?</h4>
+                        <div class="quiz-options" data-question="1" data-correct="a">
+                            <div class="quiz-option" data-answer="a">Human activities, especially burning fossil fuels</div>
+                            <div class="quiz-option" data-answer="b">Natural climate variations</div>
+                            <div class="quiz-option" data-answer="c">Solar activity changes</div>
+                            <div class="quiz-option" data-answer="d">Volcanic eruptions</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>2. Which greenhouse gas is most abundant in the atmosphere?</h4>
+                        <div class="quiz-options" data-question="2" data-correct="a">
+                            <div class="quiz-option" data-answer="a">Carbon dioxide (CO₂)</div>
+                            <div class="quiz-option" data-answer="b">Methane (CH₄)</div>
+                            <div class="quiz-option" data-answer="c">Nitrous oxide (N₂O)</div>
+                            <div class="quiz-option" data-answer="d">Water vapor (H₂O)</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>3. How much has global temperature risen since 1880?</h4>
+                        <div class="quiz-options" data-question="3" data-correct="b">
+                            <div class="quiz-option" data-answer="a">0.5°C</div>
+                            <div class="quiz-option" data-answer="b">1.1°C</div>
+                            <div class="quiz-option" data-answer="c">2.0°C</div>
+                            <div class="quiz-option" data-answer="d">3.5°C</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>4. Which sector contributes most to Ghana's greenhouse gas emissions?</h4>
+                        <div class="quiz-options" data-question="4" data-correct="c">
+                            <div class="quiz-option" data-answer="a">Transportation</div>
+                            <div class="quiz-option" data-answer="b">Industry</div>
+                            <div class="quiz-option" data-answer="c">Agriculture and land use</div>
+                            <div class="quiz-option" data-answer="d">Residential buildings</div>
+                        </div>
+                    </div>
+
+                    <div class="quiz-question">
+                        <h4>5. Which renewable energy source has the highest potential in Ghana?</h4>
+                        <div class="quiz-options" data-question="5" data-correct="a">
+                            <div class="quiz-option" data-answer="a">Solar energy</div>
+                            <div class="quiz-option" data-answer="b">Wind energy</div>
+                            <div class="quiz-option" data-answer="c">Geothermal energy</div>
+                            <div class="quiz-option" data-answer="d">Tidal energy</div>
+                        </div>
+                    </div>
+
+                    <button class="quiz-submit" onclick="submitQuiz()">Submit Quiz</button>
+                    <div id="quizResult" class="quiz-result" style="display: none;"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="donateModal" class="donate-modal">
+        <div class="donate-modal-content">
+            <span class="close-donate-modal" onclick="closeDonateModal()">&times;</span>
+            <h2 class="donate-form-title">Support Green Ghana Alliance</h2>
+            <form id="donationForm">
+                <div class="donate-form-group">
+                    <label for="donorName">Full Name</label>
+                    <input type="text" id="donorName" name="donorName" required>
+                </div>
+                
+                <div class="donate-form-group">
+                    <label for="donorEmail">Email Address</label>
+                    <input type="email" id="donorEmail" name="donorEmail" required>
+                </div>
+                
+                <div class="donate-form-group">
+                    <label>Donation Amount (GHS)</label>
+                    <div class="donate-amount-options">
+                        <div class="donate-amount-option" data-amount="50">50</div>
+                        <div class="donate-amount-option" data-amount="100">100</div>
+                        <div class="donate-amount-option" data-amount="200">200</div>
+                        <div class="donate-amount-option" data-amount="500">500</div>
+                        <div class="donate-amount-option" data-amount="1000">1000</div>
+                        <div class="donate-amount-option" id="customAmountOption">Other</div>
+                    </div>
+                    <div class="donate-custom-amount" id="customAmountInput">
+                        <input type="number" id="donationAmount" name="donationAmount" min="1" placeholder="Enter custom amount">
+                    </div>
+                </div>
+                
+                <div class="donate-form-group">
+                    <label for="donationFrequency">Donation Frequency</label>
+                    <select id="donationFrequency" name="donationFrequency">
+                        <option value="one-time">One-time donation</option>
+                        <option value="monthly">Monthly donation</option>
+                        <option value="quarterly">Quarterly donation</option>
+                        <option value="yearly">Yearly donation</option>
+                    </select>
+                </div>
+                
+                <div class="donate-form-group">
+                    <label for="donationMessage">Message (Optional)</label>
+                    <input type="text" id="donationMessage" name="donationMessage" placeholder="Add a personal message">
+                </div>
+                
+                <button type="submit" class="donate-submit-btn">Donate Now</button>
+                
+                <div class="donate-payment-methods">
+                    <p>We accept:</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/1200px-MasterCard_Logo.svg.png" alt="Mastercard">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Visa_Inc._logo.svg/1200px-Visa_Inc._logo.svg.png" alt="Visa">
+                    <img src="mobile money.webp" alt="Mobile Money" style="height: 25px;">
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <span class="close-video-modal" onclick="closeVideoModal()">&times;</span>
+            <div class="video-container" id="videoIframeContainer"></div>
+            <div class="video-info" id="videoInfo">
+                <h3 id="videoTitle"></h3>
+                <p id="videoDescription"></p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Green Ghana Alliance</h3>
+                    <p>Empowering Ghana's youth to take action against climate change through education, advocacy, and community engagement.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <div class="contact-info">
+                        <a href="mailto:greenghanaalliance@gmail.com">📧 greenghanaalliance@gmail.com</a>
+                        <p>📍 Accra, Ghana</p>
+                        <a href="tel:+233 53 269 1145">📞 +233 53 269 1145</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Our Mission</h3>
+                    <p>To educate, inspire, and mobilize Ghana's youth in the fight against climate change, creating a sustainable and resilient future for our nation.</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Green Ghana Alliance. All rights reserved. | Building a greener Ghana together.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const navLinks = document.getElementById('navLinks');
+            navLinks.classList.toggle('active');
+        }
+
+        function openDonateModal() {
+            const modal = document.getElementById('donateModal');
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDonateModal() {
+            const modal = document.getElementById('donateModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        window.onclick = function(event) {
+            const donateModal = document.getElementById('donateModal');
+            const videoModal = document.getElementById('videoModal');
+            
+            if (event.target === donateModal) {
+                closeDonateModal();
+            }
+            if (event.target === videoModal) {
+                closeVideoModal();
+            }
+        }
+
+        document.querySelectorAll('.donate-amount-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.donate-amount-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                this.classList.add('selected');
+                
+                if (this.id === 'customAmountOption') {
+                    document.getElementById('customAmountInput').style.display = 'block';
+                    document.getElementById('donationAmount').focus();
+                } else {
+                    document.getElementById('customAmountInput').style.display = 'none';
+                    document.getElementById('donationAmount').value = '';
+                }
+            });
+        });
+
+        document.getElementById('donationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('donorName').value;
+            const email = document.getElementById('donorEmail').value;
+            const frequency = document.getElementById('donationFrequency').value;
+            const message = document.getElementById('donationMessage').value;
+            
+            let amount;
+            const selectedOption = document.querySelector('.donate-amount-option.selected');
+            
+            if (selectedOption && selectedOption.id !== 'customAmountOption') {
+                amount = selectedOption.getAttribute('data-amount');
+            } else {
+                amount = document.getElementById('donationAmount').value;
+            }
+            
+            if (!amount || isNaN(amount)) {
+                alert('Please enter a valid donation amount');
+                return;
+            }
+            
+            const donation = {
+                name,
+                email,
+                amount: parseFloat(amount),
+                frequency,
+                message,
+                date: new Date().toISOString()
+            };
+            
+            console.log('Donation submitted:', donation);
+            
+            alert(`Thank you, ${name}, for your donation of GHS ${amount}!`);
+            
+            closeDonateModal();
+            this.reset();
+            document.querySelectorAll('.donate-amount-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            document.getElementById('customAmountInput').style.display = 'none';
+        });
+
+        const videoData = {
+            'climate-basics': {
+                title: 'Climate Change Basics',
+                url: 'https://www.youtube.com/embed/dcBRPn3NN3w',
+                description: 'Learn the fundamental science behind climate change'
+            },
+            'ghana-impact': {
+                title: 'Climate Impact in Ghana',
+                url: 'https://www.youtube.com/embed/EuwKH_3DvkM',
+                description: 'How climate change is specifically affecting Ghana'
+            },
+            'solutions': {
+                title: 'Climate Solutions',
+                url: 'https://www.youtube.com/embed/yiw6_JakZFc',
+                description: 'Practical solutions to combat climate change'
+            }
+        };
+
+        function playVideo(videoType) {
+            const videoInfo = videoData[videoType];
+            const modal = document.getElementById('videoModal');
+            const iframeContainer = document.getElementById('videoIframeContainer');
+            
+            iframeContainer.innerHTML = `
+                <iframe src="${videoInfo.url}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            `;
+            
+            document.getElementById('videoTitle').textContent = videoInfo.title;
+            document.getElementById('videoDescription').textContent = videoInfo.description;
+            
+            modal.style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const iframeContainer = document.getElementById('videoIframeContainer');
+            
+            iframeContainer.innerHTML = '';
+            
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        let selectedAnswers = {};
+
+        document.querySelectorAll('.quiz-option').forEach(option => {
+            option.addEventListener('click', function() {
+                if (document.getElementById('quizResult').style.display !== 'none') return;
+                
+                const questionNum = this.parentElement.getAttribute('data-question');
+                const answer = this.getAttribute('data-answer');
+                
+                this.parentElement.querySelectorAll('.quiz-option').forEach(opt => {
+                    opt.classList.remove('selected');
+                });
+                
+                this.classList.add('selected');
+                
+                selectedAnswers[questionNum] = answer;
+            });
+        });
+
+        function submitQuiz() {
+            if (document.getElementById('quizResult').style.display !== 'none') return;
+            
+            const totalQuestions = 5;
+            let correctAnswers = 0;
+            
+            const correctAnswersKey = {
+                '1': 'a',
+                '2': 'a',
+                '3': 'b',
+                '4': 'c',
+                '5': 'a'
+            };
+            
+            if (Object.keys(selectedAnswers).length < totalQuestions) {
+                alert('Please answer all questions before submitting.');
+                return;
+            }
+            
+            document.querySelectorAll('.quiz-options').forEach(questionDiv => {
+                const questionNum = questionDiv.getAttribute('data-question');
+                const correctAnswer = questionDiv.getAttribute('data-correct');
+                const userAnswer = selectedAnswers[questionNum];
+                
+                questionDiv.querySelectorAll('.quiz-option').forEach(option => {
+                    const optionAnswer = option.getAttribute('data-answer');
+                    
+                    if (optionAnswer === correctAnswer) {
+                        option.classList.add('correct');
+                    } else if (optionAnswer === userAnswer && userAnswer !== correctAnswer) {
+                        option.classList.add('incorrect');
+                    }
+                });
+                
+                if (userAnswer === correctAnswer) {
+                    correctAnswers++;
+                }
+            });
+            
+            const resultDiv = document.getElementById('quizResult');
+            const percentage = Math.round((correctAnswers / totalQuestions) * 100);
+            
+            let resultClass, resultMessage;
+            
+            if (percentage >= 80) {
+                resultClass = 'success';
+                resultMessage = `
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 10px;">Excellent! 🎉</h4>
+                        <p>You scored ${correctAnswers}/${totalQuestions} (${percentage}%)</p>
+                        <p>You have a great understanding of climate change!</p>
+                    </div>
+                `;
+            } else if (percentage >= 60) {
+                resultClass = 'warning';
+                resultMessage = `
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 10px;">Good Job! 👍</h4>
+                        <p>You scored ${correctAnswers}/${totalQuestions} (${percentage}%)</p>
+                        <p>Review the materials to improve your knowledge.</p>
+                    </div>
+                `;
+            } else {
+                resultClass = 'warning';
+                resultMessage = `
+                    <div style="text-align: center;">
+                        <h4 style="margin-bottom: 10px;">Keep Learning! 📚</h4>
+                        <p>You scored ${correctAnswers}/${totalQuestions} (${percentage}%)</p>
+                        <p>Review the educational content above to improve.</p>
+                    </div>
+                `;
+            }
+            
+            resultDiv.className = `quiz-result ${resultClass}`;
+            resultDiv.innerHTML = resultMessage;
+            resultDiv.style.display = 'block';
+            
+            document.querySelectorAll('.quiz-option').forEach(option => {
+                option.style.pointerEvents = 'none';
+            });
+            
+            document.querySelector('.quiz-submit').style.display = 'none';
+            
+            const retryBtn = document.createElement('button');
+            retryBtn.className = 'quiz-submit';
+            retryBtn.textContent = 'Try Again';
+            retryBtn.style.marginTop = '20px';
+            retryBtn.onclick = resetQuiz;
+            
+            resultDiv.appendChild(retryBtn);
+        }
+
+        function resetQuiz() {
+            selectedAnswers = {};
+            
+            document.querySelectorAll('.quiz-option').forEach(option => {
+                option.classList.remove('selected', 'correct', 'incorrect');
+                option.style.pointerEvents = 'auto';
+            });
+            
+            document.getElementById('quizResult').style.display = 'none';
+            document.querySelector('.quiz-submit').style.display = 'block';
+            
+            const retryBtn = document.querySelector('.quiz-submit[onclick="resetQuiz()"]');
+            if (retryBtn) {
+                retryBtn.remove();
+            }
+        }
+
+        function createCharts() {
+            const tempCtx = document.getElementById('temperatureChart').getContext('2d');
+            new Chart(tempCtx, {
+                type: 'line',
+                data: {
+                    labels: ['1880', '1900', '1920', '1940', '1960', '1980', '2000', '2020'],
+                    datasets: [{
+                        label: 'Temperature Anomaly (°C)',
+                        data: [-0.2, -0.1, -0.1, 0.1, 0.0, 0.4, 0.6, 1.1],
+                        borderColor: '#1b4332',
+                        backgroundColor: 'rgba(27, 67, 50, 0.1)',
+                        borderWidth: 4,
+                        tension: 0.3,
+                        fill: true,
+                        pointBackgroundColor: '#40916c',
+                        pointBorderColor: '#fff',
+                        pointRadius: 5,
+                        pointHoverRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.parsed.y}°C`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false,
+                            grid: {
+                                color: '#e8f5e8'
+                            },
+                            ticks: {
+                                color: '#2d5016',
+                                callback: function(value) {
+                                    return value + '°C';
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#1b4332'
+                            }
+                        }
+                    },
+                    interaction: {
+                        intersect: false,
+                        mode: 'index'
+                    },
+                    animation: {
+                        duration: 2000
+                    }
+                }
+            });
+
+            const impactCtx = document.getElementById('impactChart').getContext('2d');
+            new Chart(impactCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['Agriculture (35%)', 'Water Resources (25%)', 'Health (20%)', 'Coastal Areas (15%)', 'Economy (5%)'],
+                    datasets: [{
+                        data: [35, 25, 20, 15, 5],
+                        backgroundColor: [
+                            '#1b4332',
+                            '#2d5016',
+                            '#40916c',
+                            '#52b788',
+                            '#74c69d'
+                        ],
+                        borderWidth: 3,
+                        borderColor: '#fff',
+                        hoverOffset: 15
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '65%',
+                    plugins: {
+                        legend: {
+                            position: 'right',
+                            labels: {
+                                color: '#1b4332',
+                                padding: 20,
+                                font: {
+                                    size: 12,
+                                    weight: 'bold'
+                                },
+                                usePointStyle: true,
+                                pointStyle: 'circle'
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    const label = context.label || '';
+                                    const value = context.raw || 0;
+                                    return `${label}: ${value}% of total impacts`;
+                                }
+                            }
+                        }
+                    },
+                    animation: {
+                        animateScale: true,
+                        animateRotate: true
+                    }
+                }
+            });
+
+            const emissionsCtx = document.getElementById('emissionsChart').getContext('2d');
+            new Chart(emissionsCtx, {
+                type: 'bar',
+                data: {
+                    labels: ['Agriculture (45%)', 'Energy (20%)', 'Transport (15%)', 'Industry (10%)', 'Waste (5%)', 'Land Use (5%)'],
+                    datasets: [{
+                        label: 'Percentage of Total Emissions',
+                        data: [45, 20, 15, 10, 5, 5],
+                        backgroundColor: [
+                            '#1b4332',
+                            '#2d5016',
+                            '#40916c',
+                            '#52b788',
+                            '#74c69d',
+                            '#95d5b2'
+                        ],
+                        borderColor: '#fff',
+                        borderWidth: 2,
+                        borderRadius: 8
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.parsed.y}% of Ghana's total emissions`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            max: 50,
+                            grid: {
+                                color: '#e8f5e8'
+                            },
+                            ticks: {
+                                color: '#2d5016',
+                                callback: function(value) {
+                                    return value + '%';
+                                }
+                            }
+                        },
+                        x: {
+                            grid: {
+                                display: false
+                            },
+                            ticks: {
+                                color: '#1b4332',
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 1500,
+                        easing: 'easeOutBounce'
+                    }
+                }
+            });
+
+            const solutionsCtx = document.getElementById('solutionsChart').getContext('2d');
+            new Chart(solutionsCtx, {
+                type: 'radar',
+                data: {
+                    labels: ['Solar Energy', 'Reforestation', 'Public Transport', 'Recycling', 'Smart Agriculture', 'Green Buildings'],
+                    datasets: [{
+                        label: 'CO₂ Reduction Potential (%)',
+                        data: [85, 70, 60, 45, 55, 40],
+                        borderColor: '#1b4332',
+                        backgroundColor: 'rgba(27, 67, 50, 0.3)',
+                        borderWidth: 3,
+                        pointBackgroundColor: '#40916c',
+                        pointBorderColor: '#fff',
+                        pointRadius: 5,
+                        pointHoverRadius: 7
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                            labels: {
+                                color: '#1b4332',
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function(context) {
+                                    return `${context.dataset.label}: ${context.raw}%`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: '#b7e4c7'
+                            },
+                            grid: {
+                                color: '#b7e4c7'
+                            },
+                            suggestedMin: 0,
+                            suggestedMax: 100,
+                            ticks: {
+                                stepSize: 20,
+                                color: '#2d5016',
+                                backdropColor: 'transparent'
+                            },
+                            pointLabels: {
+                                color: '#1b4332',
+                                font: {
+                                    weight: 'bold'
+                                }
+                            }
+                        }
+                    },
+                    animation: {
+                        duration: 2000,
+                        easing: 'easeOutQuart'
+                    }
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            createCharts();
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.animationPlayState = 'running';
+                    }
+                });
+            }, observerOptions);
+            
+            document.querySelectorAll('.card, .solution-item, .stat-item').forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
